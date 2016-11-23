@@ -1,1 +1,253 @@
-Alex Fischer
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Alexander Fischer</title>
+			 <meta charset="UTF-8">
+			<style type="text/css">
+			body
+			{
+				background-color: #BBBBBB;
+				padding: 0px;
+				margin: 0px;
+			}
+			h1
+			{
+				background-color: #FFFFFF;
+				/*position: fixed;
+				left: 0px; right: 0px; top: 0px;*/
+				height: 80px;
+				line-height: 80px;
+				margin: 0px;
+			}
+			h1, h2, h3
+			{
+				text-align: center;
+				font-family: Futura, geometric, sans-serif;
+			}
+			div#mainNavigationButton
+			{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				font-size: 40pt;
+				text-align: center;
+				height: 80px;
+				width: 80px;
+				cursor: pointer;
+				background: none;
+				-moz-user-select: -moz-none;
+   			-khtml-user-select: none;
+   			-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+			ul#mainNavigation
+			{
+				position: fixed;
+				left: 0px;
+				top: 80px;
+				list-style-type: none;
+				width: 200px;
+				margin: 0px;
+				padding: 0px;
+				visibility: hidden;
+			}
+			ul#mainNavigation li a
+			{
+				color: black;
+				text-decoration: none;
+				line-height: 40px;
+				height: 40px;
+				display: block;
+				padding-left: 20px;
+				background: #FFFFFF;
+			}
+			ul#mainNavigation li a:hover
+			{
+				background: #CCCCCC;
+			}
+			div#content
+			{
+				margin-bottom: 10px;
+			}
+			div#content, div#contactContent
+			{
+				width: 700px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			h2
+			{
+				font-size: 18pt;
+			}
+			h3
+			{
+				font-size: 15pt;
+			}
+			p, ul#mainNavigation a, a.contactLink
+			{
+				font-size: 15pt;
+				font-family: Futura, geometric, sans-serif;
+				text-align: justify;
+			}
+			div.figure
+			{
+				text-align: center;
+			}
+			div.figure p
+			{
+				text-align: center;
+				font-size: 10pt;
+			}
+			div#contactContent
+			{
+				height: 140px;
+				width: 440px;
+				margin: auto;
+			}
+			div.contactLinkWrapper
+			{
+				float: left;
+				padding: 10px;
+				width: 200px;
+				height: 120px;
+			}
+			a.contactLink
+			{
+				display: block;
+				color: #000000;
+				text-align: center;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+				padding: 10px;
+				margin: auto;
+				font-size: 10pt;
+				opacity: 0.5;
+				transition: 0.1s;
+			}
+			a.contactLink:hover
+			{
+				opacity: 1.0;
+				transition: 0.1s;
+			}
+			span.invisible
+			{
+				display: none;
+			}
+			</style>
+		</head>
+		<body>
+			<h1>Alexander Fischer</h1>
+			<div id="mainNavigationButton" onclick="onMainNavigationButtonClicked()">☰</div>
+			<ul id="mainNavigation">
+				<li><a href="#aboutMe">About Me</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#resume">Résumé</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<div id="content">
+				<h2 id="aboutMe">About Me</h2>
+					<p>
+						My name is Alexander Fischer, or Alex for short. I am <span id="age">18</span> years old and studying computer science and mathematics at the University of Massachusetts, Amherst, from which I expect to graduate in 2020. I am originally from Franklin, Massachusetts. I have been programming since before high school, and I do most of my programming in Java, although I am familiar with and eager to learn other languages. My interests in computer science are wide-ranging; I am interested in hardware and embedded programming, which I have explored at several hackathons. I am also interested in more theoretical and mathematical aspects of computer science such as numerical analysis and artificial intelligence as a result of my interest in mathematics.
+					</p>
+				<h2 id="projects">Projects</h2>
+					<h3>HackHolyoke 2016</h3>
+						<p>
+							At HackHolyoke, Will Zhang and I created a prototype for a bike lock that can be unlocked wirelessly with your phone. The project utilized an Arduino 101 and Bluetooth low energy. The project won best hardware hack at Holyoke and can be found <a href="https://devpost.com/software/bike-lock">on Devpost</a>.
+						</p>		
+					<h3>HackUMass 2016</h3>
+						<p>
+							At HackUMass, Will Zhang and I used the Leap Motion to add a twist to a classic game. We detected your hand orientation with the Leap Motion and then used servo motors and that orientation to rotate a physical maze that we 3D printed. There was a small metal ball in the maze that you had to move through the maze just by rotating your hand, like the usual ball in a maze game, but harder. The project can be found <a href="https://devpost.com/software/mazemotion">on Devpost</a>, and a demo can be seen below.
+						</p>
+						<div class="figure">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/N4QyJGZ7c14" frameborder="0" allowfullscreen></iframe>
+							<p>Our Leap Motion-based game in action.</p>
+						</div>
+					<h3>Mandelbrot Set Renderer</h3>
+						<p>
+							In this project I created a program that renders images of the <a href="https://wikipedia.org/wiki/Mandelbrot_set">Mandelbrot Set</a>. It uses smooth coloring and can be multithreaded. I wrote it in Java, and my can be found <a href="https://github.com/AlexDFischer/mandelbrot">on Github</a>.
+						</p>
+						<div class="figure">
+							<img src="mandelbrotgui.png" alt="GUI for Mandelbrot set program">
+							<p>The GUI used to render the Mandelbrot set.</p>
+						</div>
+						<div class="figure">
+							<img src="mandelbrotexample.png" alt="example image rendered by Mandelbrot set program">
+							<p>An example image. See example 3 in the program.</p>
+						</div>
+					<h3>Automata Renderer</h3>
+						<p>
+							Part of this project was for school (an intro to data structures honors project specifically), but I really liked it so I thought I'd share it here. This project is two-fold: the first part displays all of Wolfram's <a href="http://mathworld.wolfram.com/ElementaryCellularAutomaton.html">elementary cellular automata</a> rules, and the second part displays <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>. In my Conway's game of life implementation, you can click on squares to change their value. I wrote it in Java, and my code can be found <a href="https://github.com/UMassCS187HH/project1-automata">on Github</a>.
+						</p>
+						<div class="figure">
+							<img src="rule30.png" alt="Rule 30 as computed by my program">
+							<p>A rendering of <a href="http://mathworld.wolfram.com/Rule30.html">rule 30</a>.</p>
+						</div>
+						<div class="figure">
+							<img src="gameoflife.png" alt="Conway's Game of Life as computed by my program">
+							<p>A rendering of Conway's Game of Life.</p>
+						</div>
+					<h3>SPIRE Auto-Enroller</h3>
+						<p>
+							This was a small but very useful project. SPIRE is the system that UMASS uses to enroll in classes, and when classes are full, there is not always a waitlist option. This program uses Selenium to periodically check SPIRE and enroll you in a class if it opens. I wrote it in Java, and the code can be found <a href="https://github.com/AlexDFischer/autoenroller">on Github</a>.
+						</p>
+					<h3>Franklin High School ID Search</h3>
+						<p>
+							This was another small but very useful project. At Franklin High School, students were assigned school emails (which we were required to use for all schoolwork) that were just a 7 digit number at franklinps.net. This was a terrible system, as no one wanted to memorize other people's numbers, requiring that people constantly ask other people for their numbers instead of simply using their name. I came up with a solution to this problem by scraping everyone's number and name from Itslearning, an educational website the school used, and building a website that allowed people to find people's numbers and email addresses by their names (and vice versa). Eventually, Google added a feature where members of a Google organization (which Franklin High School was) could find others' email address in any Google product by typing in their name, making my website obsolete. I like to think that Google added in that feature after seeing how useful my website was.
+						</p>
+						<p>
+							The site is still live on the web at <a href="http://fhsid.github.io">fhsid.github.io</a>.
+						</p>
+				<h2 id="resume">Résumé</h2>
+				<h2 id="contact">Contact</h2>
+				<div id="contactContent">
+					<div class="contactLinkWrapper">
+					<a href="#" class="contactLink" id="emailContactLink">
+						<img src="mail.png" alt="GitHub" height="64" width="64" />
+						<br />
+						afi<span class="invisible">*remove text between stars to get email address*</span>scher@umass<span class="invisible">*remove text between stars to get email address*</span>.edu
+					</a>
+					</div>
+					<div class="contactLinkWrapper">
+						<a href="http://github.com/AlexDFischer" class="contactLink">
+							<img src="github.png" alt="GitHub" height="64" width="64" />
+							<br />
+							github.com/AlexDFischer
+						</a>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				// set birthday to accurate date, because I'll forget to update it
+				var birthday = new Date(1997, 12, 08);
+	    		var ageDifMs = Date.now() - birthday.getTime();
+	    		var ageDate = new Date(ageDifMs); // miliseconds from epoch
+	    		var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+				document.getElementById("age").innerHTML = age;
+				
+				// main navigation button
+				var mainNavigationVisible = true;
+				function onMainNavigationButtonClicked()
+				{
+					if (window.mainNavigationVisible)
+					{
+						window.mainNavigationVisible = false;
+						document.getElementById("mainNavigation").style.visibility = "hidden";
+						document.getElementById("mainNavigationButton").style.background = "none";
+						document.getElementById("mainNavigationButton").style.background = "none";
+					} else {
+						window.mainNavigationVisible = true;
+						document.getElementById("mainNavigation").style.visibility = "visible";
+						document.getElementById("mainNavigationButton").style.background = "#FFFFFF";
+					}
+				}
+				onMainNavigationButtonClicked();
+				
+				// de obfuscating email address
+				var dummy = "";
+				dummy += "du";
+				dummy = "umass" + "." + "e" + dummy;
+				dummy = "afisch" + "er" + "@" + dummy;
+				document.getElementById("emailContactLink").setAttribute("href", "mai" + "lto:" + dummy);
+			</script>
+		</body>
+	</html>
