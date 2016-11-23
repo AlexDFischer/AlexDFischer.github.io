@@ -6,7 +6,7 @@
 			<style type="text/css">
 			body
 			{
-				background-color: #BBBBBB;
+				background-color: #CCCCEE;
 				padding: 0px;
 				margin: 0px;
 			}
@@ -82,18 +82,56 @@
 			h3
 			{
 				font-size: 15pt;
+				margin: 0px;
+				margin-bottom: -30px;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 20px;
+				border: 1px black solid;
+				display: block;
+			}
+			/*
+			TODO in firefox, selecting the whole project header expands it, whereas in chrome, selecting the header text or the expand image expands it. Fix that pls by putting both inside an <a> element with href equal to the expand javascript
+			*/
+			div.projectSection h3, img.expandButton
+			{
+				cursor: pointer;
 			}
 			p, ul#mainNavigation a, a.contactLink
 			{
-				font-size: 15pt;
+				font-size: 14pt;
 				font-family: Futura, geometric, sans-serif;
 				text-align: justify;
+			}
+			p
+			{
+			}
+			div.projectSection
+			{
+				background: #FFFFFF;
+				padding-left: 0px;
+				padding-right: 0px;
+				padding-top: 0px;
+				border-radius: 20px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				overflow: hidden;
+			}
+			img.expandButton
+			{
+				position: relative;
+				left: 10px;
+				top: -1px;
+			}
+			div.projectSection p
+			{
+				margin: 10px 20px;;
 			}
 			div.figure
 			{
 				text-align: center;
 			}
-			div.figure p
+			div.projectSection div.figure p
 			{
 				text-align: center;
 				font-size: 10pt;
@@ -150,11 +188,19 @@
 						My name is Alexander Fischer, or Alex for short. I am <span id="age">18</span> years old and studying computer science and mathematics at the University of Massachusetts, Amherst, from which I expect to graduate in 2020. I am originally from Franklin, Massachusetts. I have been programming since before high school, and I do most of my programming in Java, although I am familiar with and eager to learn other languages. My interests in computer science are wide-ranging; I am interested in hardware and embedded programming, which I have explored at several hackathons. I am also interested in more theoretical and mathematical aspects of computer science such as numerical analysis and artificial intelligence as a result of my interest in mathematics.
 					</p>
 				<h2 id="projects">Projects</h2>
-					<h3>HackHolyoke 2016</h3>
+					
+					<div id="hackholyokeProjectSection" class="projectSection" style="transition: 0.3s;">
+						<h3 onclick="expandSection('hackholyokeProjectSection')">HackHolyoke 2016</h3>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
 						<p>
 							At HackHolyoke, Will Zhang and I created a prototype for a bike lock that can be unlocked wirelessly with your phone. The project utilized an Arduino 101 and Bluetooth low energy. The project won best hardware hack at Holyoke and can be found <a href="https://devpost.com/software/bike-lock">on Devpost</a>.
+						
 						</p>		
-					<h3>HackUMass 2016</h3>
+					</div>
+					
+					<div id="hackumassProjectSection" class="projectSection">
+						<h3>HackUMass 2016</h3>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
 						<p>
 							At HackUMass, Will Zhang and I used the Leap Motion to add a twist to a classic game. We detected your hand orientation with the Leap Motion and then used servo motors and that orientation to rotate a physical maze that we 3D printed. There was a small metal ball in the maze that you had to move through the maze just by rotating your hand, like the usual ball in a maze game, but harder. The project can be found <a href="https://devpost.com/software/mazemotion">on Devpost</a>, and a demo can be seen below.
 						</p>
@@ -162,7 +208,11 @@
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/N4QyJGZ7c14" frameborder="0" allowfullscreen></iframe>
 							<p>Our Leap Motion-based game in action.</p>
 						</div>
-					<h3>Mandelbrot Set Renderer</h3>
+					</div>
+					
+					<div id="mandelbrotProjectSection" class="projectSection">
+						<h3>Mandelbrot Set Renderer</h3>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
 						<p>
 							In this project I created a program that renders images of the <a href="https://wikipedia.org/wiki/Mandelbrot_set">Mandelbrot Set</a>. It uses smooth coloring and can be multithreaded. I wrote it in Java, and my can be found <a href="https://github.com/AlexDFischer/mandelbrot">on Github</a>.
 						</p>
@@ -174,7 +224,11 @@
 							<img src="mandelbrotexample.png" alt="example image rendered by Mandelbrot set program">
 							<p>An example image. See example 3 in the program.</p>
 						</div>
-					<h3>Automata Renderer</h3>
+					</div>
+					
+					<div id="automataProjectSection" class="projectSection">
+						<h3>Automata Renderer</h3>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
 						<p>
 							Part of this project was for school (an intro to data structures honors project specifically), but I really liked it so I thought I'd share it here. This project is two-fold: the first part displays all of Wolfram's <a href="http://mathworld.wolfram.com/ElementaryCellularAutomaton.html">elementary cellular automata</a> rules, and the second part displays <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>. In my Conway's game of life implementation, you can click on squares to change their value. I wrote it in Java, and my code can be found <a href="https://github.com/UMassCS187HH/project1-automata">on Github</a>.
 						</p>
@@ -186,17 +240,29 @@
 							<img src="gameoflife.png" alt="Conway's Game of Life as computed by my program">
 							<p>A rendering of Conway's Game of Life.</p>
 						</div>
-					<h3>SPIRE Auto-Enroller</h3>
+					</div>
+					
+					<div id="spireProjectSection" class="projectSection">
+						<h3>SPIRE Auto-Enroller</h3>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
 						<p>
 							This was a small but very useful project. SPIRE is the system that UMASS uses to enroll in classes, and when classes are full, there is not always a waitlist option. This program uses Selenium to periodically check SPIRE and enroll you in a class if it opens. I wrote it in Java, and the code can be found <a href="https://github.com/AlexDFischer/autoenroller">on Github</a>.
 						</p>
-					<h3>Franklin High School ID Search</h3>
+					</div>
+					
+					<div id="fhsidProjectSection" class="projectSection">
+						<h3>Franklin High School ID Search</h3>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
 						<p>
-							This was another small but very useful project. At Franklin High School, students were assigned school emails (which we were required to use for all schoolwork) that were just a 7 digit number at franklinps.net. This was a terrible system, as no one wanted to memorize other people's numbers, requiring that people constantly ask other people for their numbers instead of simply using their name. I came up with a solution to this problem by scraping everyone's number and name from Itslearning, an educational website the school used, and building a website that allowed people to find people's numbers and email addresses by their names (and vice versa). Eventually, Google added a feature where members of a Google organization (which Franklin High School was) could find others' email address in any Google product by typing in their name, making my website obsolete. I like to think that Google added in that feature after seeing how useful my website was.
+							This was another small but very useful project. At Franklin High School, students were assigned school emails (which we were required to use for all schoolwork) that were just a 7 digit number at franklinps.net. This was a terrible system, as no one wanted to memorize other people's numbers, requiring that people constantly ask other people for their numbers instead of simply using their name.
+						</p>
+						<p>
+							I came up with a solution to this problem by scraping everyone's number and name from Itslearning, an educational website the school used, and building a website that allowed people to find people's numbers and email addresses by their names (and vice versa). Eventually, Google added a feature where members of a Google organization (which Franklin High School was) could find others' email address in any Google product by typing in their name, making my website obsolete. I like to think that Google added in that feature after seeing how useful my website was.
 						</p>
 						<p>
 							The site is still live on the web at <a href="http://fhsid.github.io">fhsid.github.io</a>.
 						</p>
+					</div>
 				<h2 id="resume">Résumé</h2>
 				<h2 id="contact">Contact</h2>
 				<div id="contactContent">
@@ -248,6 +314,26 @@
 				dummy = "umass" + "." + "e" + dummy;
 				dummy = "afisch" + "er" + "@" + dummy;
 				document.getElementById("emailContactLink").setAttribute("href", "mai" + "lto:" + dummy);
+				
+				// expand button stuff
+				function expandSection(id)
+				{
+					document.getElementById(id).style.height = "";
+					document.getElementById(id).getElementsByTagName("h3")[0].setAttribute("onclick", "contractSection(\"" + id + "\")");
+					document.getElementById(id).getElementsByTagName("img")[0].setAttribute("onclick", "contractSection(\"" + id + "\")");
+				}
+				function contractSection(id)
+				{
+					document.getElementById(id).style.height = "42px";
+					document.getElementById(id).getElementsByTagName("h3")[0].setAttribute("onclick", "expandSection(\"" + id + "\")");
+					document.getElementById(id).getElementsByTagName("img")[0].setAttribute("onclick", "expandSection(\"" + id + "\")");
+				}
+				contractSection("hackholyokeProjectSection");
+				contractSection("hackumassProjectSection");
+				contractSection("mandelbrotProjectSection");
+				contractSection("automataProjectSection");
+				contractSection("spireProjectSection");
+				contractSection("fhsidProjectSection");
 			</script>
 		</body>
 	</html>
