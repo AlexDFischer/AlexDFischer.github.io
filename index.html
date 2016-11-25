@@ -90,6 +90,13 @@
 				border: 1px black solid;
 				display: block;
 			}
+			img#me
+			{
+				margin-left: auto;
+				margin-right: auto;
+				width: 100px;
+				display: block
+			}
 			/*
 			TODO in firefox, selecting the whole project header expands it, whereas in chrome, selecting the header text or the expand image expands it. Fix that pls by putting both inside an <a> element with href equal to the expand javascript
 			*/
@@ -102,9 +109,6 @@
 				font-size: 14pt;
 				font-family: Futura, geometric, sans-serif;
 				text-align: justify;
-			}
-			p
-			{
 			}
 			div.projectSection
 			{
@@ -178,15 +182,18 @@
 			<div id="mainNavigationButton" onclick="onMainNavigationButtonClicked()">☰</div>
 			<ul id="mainNavigation">
 				<li><a href="#aboutMe">About Me</a></li>
-				<li><a href="#projects">Projects</a></li>
 				<li><a href="#resume">Résumé</a></li>
+				<li><a href="#projects">Projects</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 			<div id="content">
 				<h2 id="aboutMe">About Me</h2>
+					<img src="methumbnail.jpg" alt="me" id="me">
 					<p>
 						My name is Alexander Fischer, or Alex for short. I am <span id="age">18</span> years old and studying computer science and mathematics at the University of Massachusetts, Amherst, from which I expect to graduate in 2020. I am originally from Franklin, Massachusetts. I have been programming since before high school, and I do most of my programming in Java, although I am familiar with and eager to learn other languages. My interests in computer science are wide-ranging; I am interested in hardware and embedded programming, which I have explored at several hackathons. I am also interested in more theoretical and mathematical aspects of computer science such as numerical analysis and artificial intelligence as a result of my interest in mathematics.
 					</p>
+				<h2 id="resume">Résumé</h2>
+					<p style="text-align: center"><a href="AlexanderFischerResume.pdf">View my résumé</a></p>
 				<h2 id="projects">Projects</h2>
 					
 					<div id="hackholyokeProjectSection" class="projectSection" style="transition: 0.3s;">
@@ -214,7 +221,7 @@
 						<h3>Mandelbrot Set Renderer</h3>
 						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
 						<p>
-							In this project I created a program that renders images of the <a href="https://wikipedia.org/wiki/Mandelbrot_set">Mandelbrot Set</a>. It uses smooth coloring and can be multithreaded. I wrote it in Java, and my can be found <a href="https://github.com/AlexDFischer/mandelbrot">on Github</a>.
+							In this project I created a program that renders images of the <a href="https://wikipedia.org/wiki/Mandelbrot_set">Mandelbrot Set</a>. It uses smooth coloring and can be multithreaded. I wrote it in Java, and the code can be found <a href="https://github.com/AlexDFischer/mandelbrot">on Github</a>.
 						</p>
 						<div class="figure">
 							<img src="mandelbrotgui.png" alt="GUI for Mandelbrot set program">
@@ -263,20 +270,17 @@
 							The site is still live on the web at <a href="http://fhsid.github.io">fhsid.github.io</a>.
 						</p>
 					</div>
-				<h2 id="resume">Résumé</h2>
 				<h2 id="contact">Contact</h2>
 				<div id="contactContent">
 					<div class="contactLinkWrapper">
 					<a href="#" class="contactLink" id="emailContactLink">
 						<img src="mail.png" alt="GitHub" height="64" width="64" />
-						<br />
 						afi<span class="invisible">*remove text between stars to get email address*</span>scher@umass<span class="invisible">*remove text between stars to get email address*</span>.edu
 					</a>
 					</div>
 					<div class="contactLinkWrapper">
 						<a href="http://github.com/AlexDFischer" class="contactLink">
 							<img src="github.png" alt="GitHub" height="64" width="64" />
-							<br />
 							github.com/AlexDFischer
 						</a>
 					</div>
@@ -321,12 +325,14 @@
 					document.getElementById(id).style.height = "";
 					document.getElementById(id).getElementsByTagName("h3")[0].setAttribute("onclick", "contractSection(\"" + id + "\")");
 					document.getElementById(id).getElementsByTagName("img")[0].setAttribute("onclick", "contractSection(\"" + id + "\")");
+					document.getElementById(id).getElementsByTagName("img")[0].setAttribute("src", "contract.png");
 				}
 				function contractSection(id)
 				{
 					document.getElementById(id).style.height = "42px";
 					document.getElementById(id).getElementsByTagName("h3")[0].setAttribute("onclick", "expandSection(\"" + id + "\")");
 					document.getElementById(id).getElementsByTagName("img")[0].setAttribute("onclick", "expandSection(\"" + id + "\")");
+					document.getElementById(id).getElementsByTagName("img")[0].setAttribute("src", "expand.png");
 				}
 				contractSection("hackholyokeProjectSection");
 				contractSection("hackumassProjectSection");
