@@ -135,6 +135,10 @@
 			{
 				text-align: center;
 			}
+			div.figure iframe
+			{
+				border: 0px;
+			}
 			div.projectSection div.figure p
 			{
 				text-align: center;
@@ -190,36 +194,51 @@
 				<h2 id="aboutMe">About Me</h2>
 					<img src="methumbnail.jpg" alt="me" id="me">
 					<p>
-						My name is Alexander Fischer, or Alex for short. I am <span id="age">18</span> years old and studying computer science and mathematics at the University of Massachusetts, Amherst, from which I expect to graduate in 2020. I am from Franklin, Massachusetts. I have been programming since before high school, and I do most of my programming in Java, although I am familiar with and eager to learn other languages. My interests in computer science are wide-ranging; they include in hardware and embedded programming, which I have explored at several hackathons, as well as more theoretical and mathematical aspects of computer science such as numerical analysis and artificial intelligence as a result of my interest in mathematics.
+						My name is Alexander Fischer, or Alex for short. I am <span id="age">19</span> years old and studying computer science and mathematics at the University of Massachusetts, Amherst, from which I expect to graduate in 2020. I am from Franklin, Massachusetts. I have been programming since before high school, and I do most of my programming in Java, although I am familiar with and eager to learn other languages. My interests in computer science are wide-ranging; they include in hardware and embedded programming, which I have explored at several hackathons, as well as more theoretical and mathematical aspects of computer science such as numerical analysis and artificial intelligence as a result of my interest in mathematics.
 					</p>
 				<h2 id="resume">Résumé</h2>
 					<p style="text-align: center"><a href="AlexanderFischerResume.pdf">View my résumé</a></p>
 				<h2 id="projects">Projects</h2>
 					
+					<div id="chamberwellProjectSection" class="projectSection" style="transition: 0.3s;">
+						<h3 onclick="expandSection('chamberwellProjectSection')">Chamberwell</h3>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('chamberwellProjectSection')" />
+						<p>
+							Chamberwell is an Android game <a href="https://play.google.com/store/apps/details?id=me.alexfischer.maxwellsdemon">published on the Google Play store</a> that I wrote from scratch. The object of the game is to get all the balls in a level, which can be one of several colors, into the chamber that matches their color. The player does this by moving doors between chambers by tilting their phone. There are several levels, each with a different number of balls and chambers.
+						</p>
+						<div class="figure">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/YVN2BEwUx7c" allowfullscreen></iframe>
+							<p>Playthrough of level one of Chamberwell.</p>
+						</div>
+						<div class="figure">
+							<img src="chamberwellLevel09.png" alt="Level nine of Chamberwell" width="300" />
+							<p>Screenshot of level nine of Chamberwell.</p>
+						</div>		
+					</div>					
+					
 					<div id="hackholyokeProjectSection" class="projectSection" style="transition: 0.3s;">
 						<h3 onclick="expandSection('hackholyokeProjectSection')">HackHolyoke 2016</h3>
-						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')" />
 						<p>
 							At HackHolyoke, Will Zhang and I created a prototype for a bike lock that can be unlocked wirelessly with your phone. The project utilized an Arduino 101 and Bluetooth low energy. The project won best hardware hack at Holyoke and can be found <a href="https://devpost.com/software/bike-lock">on Devpost</a>.
-						
 						</p>		
 					</div>
 					
 					<div id="hackumassProjectSection" class="projectSection">
 						<h3>HackUMass 2016</h3>
-						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')" />
 						<p>
 							At HackUMass, Will Zhang and I used the Leap Motion to add a twist to a classic game. We detected your hand orientation with the Leap Motion and then used servo motors and that orientation to rotate a physical maze that we 3D printed. There was a small metal ball in the maze that you had to move through the maze just by rotating your hand, like the usual ball in a maze game, but harder. The project was selected as one of Devpost's projects of the week and was included in their weekly newsletter. It can be found <a href="https://devpost.com/software/mazemotion">on Devpost</a>, and a demo can be seen below.
 						</p>
 						<div class="figure">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/N4QyJGZ7c14" frameborder="0" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/N4QyJGZ7c14" allowfullscreen></iframe>
 							<p>Our Leap Motion-based game in action.</p>
 						</div>
 					</div>
 					
 					<div id="mandelbrotProjectSection" class="projectSection">
 						<h3>Mandelbrot Set Renderer</h3>
-						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')" />
 						<p>
 							In this project I created a program that renders images of the <a href="https://wikipedia.org/wiki/Mandelbrot_set">Mandelbrot Set</a>. It uses smooth coloring and can be multithreaded. I wrote it in Java, and the code can be found <a href="https://github.com/AlexDFischer/mandelbrot">on GitHub</a>.
 						</p>
@@ -235,7 +254,7 @@
 					
 					<div id="automataProjectSection" class="projectSection">
 						<h3>Automata Renderer</h3>
-						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')" />
 						<p>
 							Part of this project was for school (an intro to data structures honors project specifically), but I really liked it so I thought I'd share it here. This project is two-fold: the first part displays all of Wolfram's <a href="http://mathworld.wolfram.com/ElementaryCellularAutomaton.html">elementary cellular automata</a> rules, and the second part displays <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>. In my Conway's game of life implementation, you can click on squares to change their value. I wrote it in Java, and my code can be found <a href="https://github.com/UMassCS187HH/project1-automata">on Github</a>.
 						</p>
@@ -251,7 +270,7 @@
 					
 					<div id="spireProjectSection" class="projectSection">
 						<h3>SPIRE Auto-Enroller</h3>
-						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')" />
 						<p>
 							This was a small but very useful project. SPIRE is the system that UMASS uses to enroll in classes, and when classes are full, there is not always a waitlist option. This program uses Selenium to periodically check SPIRE and enroll you in a class if it opens. I wrote it in Java, and the code can be found <a href="https://github.com/AlexDFischer/autoenroller">on GitHub</a>.
 						</p>
@@ -259,7 +278,7 @@
 					
 					<div id="fhsidProjectSection" class="projectSection">
 						<h3>Franklin High School ID Search</h3>
-						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')"></img>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hackholyokeProjectSection')" />
 						<p>
 							This was another small but very useful project. At Franklin High School, students were assigned school emails (which we were required to use for all schoolwork) that were just a 7 digit number at franklinps.net. This was a terrible system, as no one wanted to memorize other people's numbers, requiring that people constantly ask other people for their numbers instead of simply using their name.
 						</p>
@@ -334,6 +353,7 @@
 					document.getElementById(id).getElementsByTagName("img")[0].setAttribute("onclick", "expandSection(\"" + id + "\")");
 					document.getElementById(id).getElementsByTagName("img")[0].setAttribute("src", "expand.png");
 				}
+				contractSection("chamberwellProjectSection");
 				contractSection("hackholyokeProjectSection");
 				contractSection("hackumassProjectSection");
 				contractSection("mandelbrotProjectSection");
