@@ -194,7 +194,7 @@
 				<h2 id="aboutMe">About Me</h2>
 					<img src="methumbnail.jpg" alt="me" id="me">
 					<p>
-						My name is Alexander Fischer, or Alex for short. I am <span id="age">19</span> years old and studying computer science and mathematics at the University of Massachusetts, Amherst, from which I expect to graduate in 2020. I am from Franklin, Massachusetts. I have been programming since before high school, and I do most of my programming in Java, although I am familiar with and eager to learn other languages. My interests in computer science are wide-ranging; they include in hardware and embedded programming, which I have explored at several hackathons, as well as more theoretical and mathematical aspects of computer science such as numerical analysis and artificial intelligence as a result of my interest in mathematics.
+						My name is Alexander Fischer, or Alex for short. I am <span id="age">19</span> years old and studying computer science and mathematics at the University of Massachusetts, Amherst, from which I expect to graduate in 2020. I am from Franklin, Massachusetts. I have been programming since before high school, and I do most of my programming in Java, although I am familiar with and eager to learn other languages. My interests in computer science are wide-ranging; they include in hardware and embedded programming, which I have explored at several hackathons, as well as more theoretical and mathematical aspects of computer science such as cryptography and artificial intelligence as a result of my interest in mathematics.
 					</p>
 				<h2 id="resume">Résumé</h2>
 					<p style="text-align: center"><a href="AlexanderFischerResume.pdf">View my résumé</a></p>
@@ -234,6 +234,14 @@
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/N4QyJGZ7c14" allowfullscreen></iframe>
 							<p>Our Leap Motion-based game in action.</p>
 						</div>
+					</div>
+					
+					<div id="hamphackProjectSection" class="projectSection" style="transition: 0.3s;">
+						<h3 onclick="expandSection('hamphackProjectSection')">HampHack 2017</h3>
+						<img src="expand.png" alt="expand section" class="expandButton" onclick="expandSection('hamphackProjectSection')" />
+						<p>
+							At HampHack, Will Zhang and I created an Android app called Cassium that solves (or at least, tries to solve) the problem of taking group photos. Instead of taking a group photo by setting a timer on your phone/camera, putting the phone/camera down, and rushing into place, Cassium automates this process. It uses facial recognition to know when the right number of people are in the picture and when they are, it uses Indico's facial and emotional recognition API to take the picture only when every person is smiling. The usefulness of Cassium was unfortunately limited by the dismal accuracy of Indico's facial and emotional recognition API. The code can be found <a href="https://devpost.com/software/caseum">on Devpost</a>.
+						</p>		
 					</div>
 					
 					<div id="mandelbrotProjectSection" class="projectSection">
@@ -356,6 +364,7 @@
 				contractSection("chamberwellProjectSection");
 				contractSection("hackholyokeProjectSection");
 				contractSection("hackumassProjectSection");
+				contractSection("hamphackProjectSection");
 				contractSection("mandelbrotProjectSection");
 				contractSection("automataProjectSection");
 				contractSection("spireProjectSection");
