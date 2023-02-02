@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'cmu';
+    font-weight: 400;
+    src: url('fonts/computer-modern/cmunrm.ttf');
+}
+@font-face {
+    font-family: 'cmu';
+    font-weight: 700;
+    src: url('fonts/computer-modern/cmunbx.ttf');
+}
+@font-face {
+    font-family: 'cmu';
+    font-weight: 400;
+    font-style: italic;
+    src: url('fonts/computer-modern/cmunci.ttf');
+}
+@font-face {
+    font-family: 'cmu_code';
+    src: url('fonts/computer-modern/cmuntt.ttf');
+}
+
+body {
+    font-family: 'cmu';
+}
