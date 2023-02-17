@@ -20,5 +20,19 @@
 }
 
 body {
-    font-family: 'cmu';
+    /*font-family: 'cmu';*/
+}
+
+h1 {
+    color: #0000cc
+}
+
+#content {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul#pubsList li {
+    margin-bottom: 10px;
 }
