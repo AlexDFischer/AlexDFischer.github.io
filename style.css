@@ -38,3 +38,7 @@ h1 {
 ul#pubsList li {
     margin-bottom: 10px;
 }
+
+span.meAuthorList {
+    font-weight: bold;
+}
